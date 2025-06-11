@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simple Video Call</title>
+  <style>
+    video { width: 45%; margin: 10px; border: 1px solid #ccc; }
+    textarea { width: 100%; margin: 10px 0; }
+    button { margin: 5px; padding: 10px; }
+  </style>
+</head>
+<body>
+  <h1>📹 WebRTC Video Call</h1>
+
+  <video id="localVideo" autoplay muted></video>
+  <video id="remoteVideo" autoplay></video>
+
+  <br />
+
+  <button onclick="startCamera()">Start Camera</button>
+  <button onclick="createOffer()">Create Offer</button>
+  <button onclick="createAnswer()">Create Answer</button>
+  <button onclick="acceptAnswer()">Accept Answer</button>
+
+  <h3>Offer</h3>
+  <textarea id="offer" rows="6" placeholder="Paste or copy offer..."></textarea>
+
+  <h3>Answer</h3>
+  <textarea id="answer" rows="6" placeholder="Paste or copy answer..."></textarea>
+
+  <script src="app.js"></script>
+</body>
+</html>
